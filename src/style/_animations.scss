@@ -1,0 +1,17 @@
+@keyframes menuNotSelected {
+
+	0% {
+		left: 100%;
+		width: 100%;
+	}
+
+	50% {
+		left: -$baseMeather;
+		width: 150%;
+	}
+
+	100% {
+		width: 100%;
+		left: 200%;
+	}
+}
