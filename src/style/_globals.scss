@@ -1,4 +1,30 @@
 $backgroundColor: rgb(0, 0, 0);
 $textColor: rgb(255, 255, 255);
+
+
 $accentColor: rgb(25, 214, 0);
-$baseMeather: 5vh;
+
+@mixin gradient-background {
+	background: linear-gradient(319deg, #ff0000, #ff8e00, #feff00, #8cff00, #07ff00, #00ff58, #00ffd3, #00a6ff, #002aff, #5100ff, #b000ff, #ff0099, #ff0004, #ff4200, #ffc700, #d8ff00, #53ff00, #00ff0c, #00ff9a, #00afff, #000eff, #8100ff);
+	background-size: 1320% 1320%;
+	animation: gradient-animation 22s ease infinite;
+}
+
+@keyframes gradient-animation {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+$baseMeather: 3vh;
+$baseMeatherSmall: 2vh;
+$baseMeatherBig: 10vh;

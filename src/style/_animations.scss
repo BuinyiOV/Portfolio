@@ -1,4 +1,6 @@
-@keyframes menuNotSelected {
+@import "_globals";
+
+@keyframes menuSideNotSelected {
 
 	0% {
 		left: 100%;
@@ -13,5 +15,45 @@
 	100% {
 		width: 100%;
 		left: 200%;
+	}
+}
+
+@keyframes persoSideNotSelected {
+
+	0% {
+		left: -100%;
+		width: 100%;
+	}
+
+	50% {
+		left: -2px;
+		width: 120%;
+	}
+
+	100% {
+		left: -110%;
+		width: 100%;
+	}
+}
+
+@keyframes menuSideStart {
+
+	0% {
+		bottom: -100vh;
+	}
+
+	100% {
+		bottom: 0;
+	}
+}
+
+@keyframes menuTopStart {
+
+	0% {
+		top: -10vh;
+	}
+
+	100% {
+		top: 0;
 	}
 }

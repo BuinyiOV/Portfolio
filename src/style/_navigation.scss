@@ -1,0 +1,419 @@
+@import "_globals";
+
+.menu-side {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	padding: 0 2px;
+	height: 40vh;
+	font-size: $baseMeather;
+
+	position: fixed;
+	bottom: 0;
+	right: 0;
+
+	animation: menuSideStart 1s ease 1 normal running 0s forwards;
+}
+
+.menu-side__item {
+	cursor: pointer;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 0 $baseMeather;
+	width: 100%;
+	height: $baseMeather;
+
+	transition: color 0.15s ease-in 0s;
+
+	&:hover {
+		@include gradient-background;
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: rgba(255, 0, 0, 0);
+	}
+
+	&:focus {
+		color: rgba(255, 0, 0, 0);
+		transition: color 0s ease 0.15s;
+	}
+
+	&::after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: $baseMeather;
+		position: relative;
+		top: -100%;
+		left: 100%;
+		@include gradient-background;
+		transition: left 0.3s ease 0.15s, width 0.25s ease 0s;
+	}
+
+	&:hover::after {
+		left: 0;
+		width: 2px;
+		transition: left 0.3s ease 0s, width 0.25s ease 0.15s;
+	}
+
+	&:focus::after {
+		width: 100%;
+		left: 200%;
+		transition: left 0.5s ease 0.15s, width 0.25s ease 0s;
+	}
+}
+
+.notselected {
+	color: rgba(255, 0, 0, 0);
+	text-align: center;
+	padding: 0 $baseMeather;
+	width: 100%;
+	height: $baseMeather;
+	transition: color 0s ease 0.5s;
+
+	&::after {
+		content: "";
+		display: block;
+		width: 150%;
+		height: $baseMeather;
+		position: relative;
+		top: -100%;
+		left: -$baseMeather;
+		@include gradient-background;
+		animation: menuSideNotSelected 1s ease 1 normal running 0s forwards;
+	}
+}
+
+//------------------------------------------------------------------------------
+
+.menu-top {
+	cursor: pointer;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	padding: 2px $baseMeather;
+	height: $baseMeather;
+	font-size: $baseMeather;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	animation: menuTopStart 0.5s ease 1 normal running 0s forwards;
+}
+
+.menu-top__item {
+	text-align: center;
+	text-transform: uppercase;
+	padding: 0 $baseMeather;
+	width: 100%;
+	height: $baseMeather;
+	transition: color 0.15s ease-in 0s;
+
+	&:hover {
+		@include gradient-background;
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: rgba(255, 0, 0, 0);
+	}
+
+	&::after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: relative;
+		bottom: 200%;
+		left: 0;
+		@include gradient-background;
+		transition: bottom 0.3s ease 0s, height 0.25s ease 0s;
+	}
+
+	&:hover::after {
+		height: 2px;
+		bottom: 0;
+	}
+}
+
+.selected {
+	@include gradient-background;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: rgba(255, 0, 0, 0);
+	text-align: center;
+	padding: 0 $baseMeather;
+	width: 100%;
+	height: $baseMeather;
+	transition: color 0s ease 0.5s;
+
+	&::after {
+		display: block;
+		width: 100%;
+		height: 2px;
+		position: relative;
+		bottom: 0;
+		left: 0;
+		@include gradient-background;
+		transition: bottom 0.3s ease 0s, height 0.25s ease 0s;
+	}
+}
+
+//------------------------------------------------------------------------------
+
+.personalization-side {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	padding: 0 2px;
+	height: 27vh;
+	font-size: $baseMeather;
+
+	position: fixed;
+	bottom: 0;
+	left: 0;
+
+	animation: menuSideStart 1s ease 1 normal running 0s forwards;
+}
+
+.mode-item-side {
+	cursor: pointer;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 0 $baseMeather;
+	width: 100%;
+	height: $baseMeather;
+	transition: color 0.15s ease-in 0s;
+
+	&:hover {
+		@include gradient-background;
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: rgba(255, 0, 0, 0);
+	}
+
+	&::after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: $baseMeather;
+		position: relative;
+		top: -100%;
+		right: 100%;
+		@include gradient-background;
+		transition: right 0.35s ease-in 0s, width 0.35s ease-out 0.05s;
+	}
+
+	&:hover::after {
+		right: -100%;
+		width: 2px;
+		transition: right 0.45s ease-out 0s, width 0.38s ease-in 0s;
+	}
+}
+
+.notselected-perso {
+	color: rgba(255, 0, 0, 0);
+	text-align: center;
+	padding: 0 $baseMeather;
+	width: 100%;
+	height: $baseMeather;
+	transition: color 0s ease 0.5s;
+
+	&::after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: $baseMeather;
+		position: relative;
+		top: -100%;
+		left: -100%;
+		@include gradient-background;
+		animation: persoSideNotSelected 1s ease 1 normal running 0s forwards;
+	}
+}
+
+//------------------------------------------------------------------------------------
+
+.language-side {
+	cursor: pointer;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 0 $baseMeather;
+	width: 100%;
+	height: $baseMeather;
+	transition: color 0.1s ease-in 0s;
+
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	position: relative;
+
+	&:hover {
+		@include gradient-background;
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: rgba(255, 0, 0, 0);
+	}
+
+	&::before {
+		content: "language";
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		bottom: 0;
+		z-index: -1;
+		left: 0;
+	}
+
+	&::after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: $baseMeather;
+		position: absolute;
+		top: 0;
+		right: 100%;
+		@include gradient-background;
+		transition: right 0.35s ease-in 0s, width 0.35s ease-out 0.05s;
+	}
+
+	&:hover::after {
+		right: 0;
+		width: 2px;
+		transition: right 0.25s ease-out 0s, width 0.4s ease-in 0s;
+	}
+}
+
+.language-side__en,
+.language-side__pl,
+.language-side__ua {
+	color: rgba(240, 248, 255, 0);
+}
+
+.language-side__en:hover,
+.language-side__pl:hover,
+.language-side__ua:hover {
+	border-bottom: 1px solid rgb(255, 255, 255);
+	transition: all 0.2s ease 0s;
+}
+
+//-------------------------------------------------------------------------------------
+
+.personalization-top {
+	cursor: pointer;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	padding: 2px $baseMeather;
+	height: $baseMeather;
+	font-size: $baseMeather;
+
+	position: fixed;
+	top: 0;
+	right: 0;
+
+	animation: menuTopStart 0.5s ease 1 normal running 0s forwards;
+}
+
+.mode-item-top {
+	text-align: center;
+	text-transform: uppercase;
+	padding: 0 $baseMeather;
+	width: 100%;
+	height: $baseMeather;
+	transition: color 0.15s ease-in 0s;
+
+	&:hover {
+		@include gradient-background;
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: rgba(255, 0, 0, 0);
+	}
+
+	&::after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: relative;
+		bottom: 200%;
+		left: 0;
+		@include gradient-background;
+		transition: bottom 0.3s ease 0s, height 0.25s ease 0s;
+	}
+
+	&:hover::after {
+		height: 2px;
+		bottom: 0;
+	}
+}
+
+//------------------------------------------------------------------------------------
+
+.language-top {
+	cursor: pointer;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 0 $baseMeather;
+	height: $baseMeather;
+	transition: color 0.1s ease-in 0s;
+
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	position: relative;
+
+	&:hover {
+		@include gradient-background;
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: rgba(255, 0, 0, 0);
+	}
+
+	&::before {
+		content: "language";
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		bottom: 0;
+		z-index: -1;
+		left: 0;
+	}
+
+	&::after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: $baseMeather;
+		position: absolute;
+		bottom: 100%;
+		left: 0;
+		@include gradient-background;
+		transition: bottom 0.3s ease 0s, height 0.25s ease 0s;
+	}
+
+	&:hover::after {
+		height: 2px;
+		bottom: -2px;
+
+
+	}
+}
+
+.language-top__en,
+.language-top__pl,
+.language-top__ua {
+	margin: 0 3px;
+	color: rgba(240, 248, 255, 0);
+}
+
+.language-top__en:hover,
+.language-top__pl:hover,
+.language-top__ua:hover {
+	border-bottom: 2px solid rgb(255, 255, 255);
+	transition: all 0.2s ease 0s;
+}
