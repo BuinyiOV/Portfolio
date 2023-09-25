@@ -1,10 +1,9 @@
 import {useState, useEffect} from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
-const Menu = () => {
+const Menu = ({onSetLang}) => {
 
 	const [menu, setMenu] = useState()
-	const [lang, setLang] = useState()
 	const [personalization, setPersonalization] = useState()
 	const [chapter, setChapter] = useState(null)
 	const [chapterFirstTime, setChapterFirstTime] = useState(null)
@@ -64,6 +63,14 @@ const Menu = () => {
 				btn.classList.add("notselected-perso")
 			}
 		})
+
+		const btnLang = document.querySelector('.language-side')
+			
+				btnLang.classList.add("notselected-lang")
+			
+		
+
+		
 
 		setChapterFirstTime(false)
 		setChapter(e.target.dataset.value)
@@ -188,9 +195,7 @@ const Menu = () => {
 	}
 
 	const onLang = (e) => {
-		setLang(e.target.dataset.lang)
-		console.log(e.target.dataset.lang);
-		
+		onSetLang(e)
 	}
 
 	return (

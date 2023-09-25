@@ -5,7 +5,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-evenly;
-	padding: 0 2px;
+	padding: 0 3px;
 	height: 40vh;
 	font-size: $baseMeather;
 
@@ -20,9 +20,9 @@
 	cursor: pointer;
 	text-align: center;
 	text-transform: uppercase;
-	padding: 0 $baseMeather;
 	width: 100%;
 	height: $baseMeather;
+	margin: 0 $baseMeather;
 
 	transition: color 0.15s ease-in 0s;
 
@@ -34,8 +34,7 @@
 	}
 
 	&:focus {
-		color: rgba(255, 0, 0, 0);
-		transition: color 0s ease 0.15s;
+		background: none;
 	}
 
 	&::after {
@@ -66,7 +65,7 @@
 .notselected {
 	color: rgba(255, 0, 0, 0);
 	text-align: center;
-	padding: 0 $baseMeather;
+	padding: 0;
 	width: 100%;
 	height: $baseMeather;
 	transition: color 0s ease 0.5s;
@@ -181,7 +180,7 @@
 	cursor: pointer;
 	text-align: center;
 	text-transform: uppercase;
-	padding: 0 $baseMeather;
+	padding: 0;
 	width: 100%;
 	height: $baseMeather;
 	transition: color 0.15s ease-in 0s;
@@ -215,7 +214,7 @@
 .notselected-perso {
 	color: rgba(255, 0, 0, 0);
 	text-align: center;
-	padding: 0 $baseMeather;
+	padding: 0;
 	width: 100%;
 	height: $baseMeather;
 	transition: color 0s ease 0.5s;
@@ -297,6 +296,30 @@
 .language-side__ua:hover {
 	border-bottom: 1px solid rgb(255, 255, 255);
 	transition: all 0.2s ease 0s;
+}
+
+.language-side__pl {
+	margin: 0 5px;
+}
+
+.notselected-lang {
+	color: rgba(255, 0, 0, 0);
+	text-align: center;
+	width: 100%;
+	height: $baseMeather;
+	transition: color 0s ease 0.5s;
+
+	&::after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: $baseMeather;
+		position: relative;
+		top: -100%;
+		right: -100%;
+		@include gradient-background;
+		animation: persoLangSideNotSelected 1s ease 1 normal running 0s forwards;
+	}
 }
 
 //-------------------------------------------------------------------------------------

@@ -1,0 +1,13 @@
+@import "_globals";
+
+.works {
+	margin: 20vh 30%;
+}
+
+.arrow-go-to img {
+	fill: red;
+	@include gradient-background;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: rgba(255, 0, 0, 0);
+}
