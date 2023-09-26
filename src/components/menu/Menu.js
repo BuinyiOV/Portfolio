@@ -185,12 +185,25 @@ const Menu = ({onSetLang}) => {
 
 	const onMode = () => {
 		const wrap = document.querySelector('.wrapper')
+		const svgColor = document.querySelectorAll('.link-container__svg')
+		
 		if(wrap.classList.contains("dark")){
 			wrap.classList.remove("dark")
 			wrap.classList.add("light")
+
+			svgColor.forEach((el) => {
+				el.classList.remove("dark")
+				el.classList.add("light")
+			})
+
 		} else if(wrap.classList.contains("light")){
 			wrap.classList.remove("light")
 			wrap.classList.add("dark")
+
+			svgColor.forEach((el) => {
+				el.classList.remove("light")
+				el.classList.add("dark")
+			})
 		}
 	}
 
@@ -200,8 +213,8 @@ const Menu = ({onSetLang}) => {
 
 	return (
 		<>
-		{menu}
-		{personalization}
+			{menu}
+			{personalization}
 		</>
 	)
 }

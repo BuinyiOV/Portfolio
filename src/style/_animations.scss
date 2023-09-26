@@ -75,3 +75,18 @@
 		top: 0;
 	}
 }
+
+@keyframes link {
+
+	0% {
+		transform: translate(0, 0);
+	}
+
+	50% {
+		transform: translate(0.5vw, 0);
+	}
+
+	100% {
+		transform: translate(0, 0);
+	}
+}

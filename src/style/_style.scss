@@ -26,6 +26,32 @@ body {
 	overflow: hidden;
 	height: 100%;
 	margin: 0 auto;
+
+	&::before {
+		content: '';
+		height: $baseMeather * 2;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 2;
+
+		background-image: linear-gradient(180deg, white 35%, rgba(255, 0, 128, 0) 100%);
+		transition: all 2s ease 0s;
+	}
+
+	&::after {
+		content: '';
+		height: $baseMeather * 2;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 2;
+
+		background-image: linear-gradient(180deg, black 35%, rgba(255, 0, 128, 0) 100%);
+		transition: all 2s ease 0s;
+	}
 }
 
 .presentation {

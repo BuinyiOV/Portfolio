@@ -1,19 +1,32 @@
 .light {
 	background-color: rgb(255, 255, 255);
 	color: black;
+	fill: black;
+	border-color: black;
 	transition: all 1s ease 0s;
 
-	img {
-		color: black;
+	&::after {
+		transform: translate(0, $baseMeather * -2);
+		transition: all 1s ease 0s;
 	}
+
+	&::before {
+		transform: translate(0, 0);
+	}
+
 }
 
 .dark {
 	background-color: rgb(0, 0, 0);
 	color: white;
-	transition: all 1s ease 0s;
+	fill: white;
+	border-color: white;
 
-	img {
-		color: white;
+	&::after {
+		transform: translate(0, 0);
+	}
+
+	&::before {
+		transform: translate(0, $baseMeather * -2);
 	}
 }
