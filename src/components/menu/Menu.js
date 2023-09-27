@@ -1,11 +1,10 @@
 import {useState, useEffect} from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
-const Menu = ({onSetLang}) => {
+const Menu = ({onSetLang, chapter, onSetChapter}) => {
 
 	const [menu, setMenu] = useState()
 	const [personalization, setPersonalization] = useState()
-	const [chapter, setChapter] = useState(null)
 	const [chapterFirstTime, setChapterFirstTime] = useState(null)
 
 	useEffect(() => {
@@ -65,15 +64,11 @@ const Menu = ({onSetLang}) => {
 		})
 
 		const btnLang = document.querySelector('.language-side')
-			
-				btnLang.classList.add("notselected-lang")
-			
-		
-
-		
+		btnLang.classList.add("notselected-lang")
 
 		setChapterFirstTime(false)
-		setChapter(e.target.dataset.value)
+		onSetChapter(e.target.dataset.value)
+		
 	}
 
 	const menuTop = () => {
@@ -105,7 +100,7 @@ const Menu = ({onSetLang}) => {
 	}
 
 	const onSelectedTop = (e) => {
-		setChapter(e.target.dataset.value)
+			onSetChapter(e.target.dataset.value)
 	}
 
 	const chapterSelected = () => {
@@ -117,6 +112,22 @@ const Menu = ({onSetLang}) => {
 				btn.classList.remove("selected")
 			}
 		})
+
+		const wrap = document.querySelector('.wrapper')
+		const svgColor = document.querySelectorAll('.link-container__svg')
+
+		if(wrap){
+			wrap.firstChild.classList.remove("show")
+			wrap.firstChild.classList.add("hide")
+		}
+
+		if(wrap.classList.contains("light")){
+			svgColor.forEach((el) => {
+				el.classList.remove("dark")
+				el.classList.add("light")
+			})
+
+		}
 	}
 
 	const personalizationConfigSide = () => {
@@ -190,6 +201,7 @@ const Menu = ({onSetLang}) => {
 		if(wrap.classList.contains("dark")){
 			wrap.classList.remove("dark")
 			wrap.classList.add("light")
+			document.body.style.backgroundColor = 'white'
 
 			svgColor.forEach((el) => {
 				el.classList.remove("dark")
@@ -199,6 +211,7 @@ const Menu = ({onSetLang}) => {
 		} else if(wrap.classList.contains("light")){
 			wrap.classList.remove("light")
 			wrap.classList.add("dark")
+			document.body.style.backgroundColor = 'black'
 
 			svgColor.forEach((el) => {
 				el.classList.remove("light")

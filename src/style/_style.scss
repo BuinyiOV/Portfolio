@@ -2,10 +2,14 @@
 @import "_globals";
 @import "_colors";
 @import "_animations";
+@import "_presentation";
 @import "_navigation";
 @import "_works";
+@import "_preloader";
 
 body {
+
+	background-color: black;
 
 	&::-webkit-scrollbar {
 		width: 0.9vw;
@@ -18,7 +22,6 @@ body {
 
 	&::-webkit-scrollbar-thumb {
 		background-color: rgb(255, 255, 255);
-		outline: 1px solid rgb(0, 0, 0);
 	}
 }
 
@@ -54,15 +57,10 @@ body {
 	}
 }
 
-.presentation {
-	min-height: 100vh;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+.hide {
+	animation: sectionHide 0.6s ease 1 normal running 0s forwards;
 }
 
-.presentation__name {}
-
-.presentation__position {}
+.show {
+	animation: sectionShow 0.6s ease 1 normal running 0s forwards;
+}

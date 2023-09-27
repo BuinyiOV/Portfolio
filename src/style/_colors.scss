@@ -21,9 +21,11 @@
 	color: white;
 	fill: white;
 	border-color: white;
+	transition: all 1s ease 0s;
 
 	&::after {
 		transform: translate(0, 0);
+		transition: all 1s ease 0s;
 	}
 
 	&::before {

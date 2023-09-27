@@ -146,16 +146,9 @@ const oneArticle = (content) => {
 
 
 	return (
-		<div className="works">
+		<section className="works show">
 			{contentList}
-		</div>
-
-
-
-
-		// <section className="works">
-		// 	{contentList}
-		// </section>
+		</section>
 	)
 }
 
