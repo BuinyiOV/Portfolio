@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
-const Menu = ({onSetLang, chapter, onSetChapter}) => {
+const Menu = ({onSetLang, chapter, onSetChapter, onMode}) => {
 
 	const [menu, setMenu] = useState()
 	const [personalization, setPersonalization] = useState()
@@ -192,32 +192,6 @@ const Menu = ({onSetLang, chapter, onSetChapter}) => {
 		</nav>
 		];
 		return perso
-	}
-
-	const onMode = () => {
-		const wrap = document.querySelector('.wrapper')
-		const svgColor = document.querySelectorAll('.link-container__svg')
-		
-		if(wrap.classList.contains("dark")){
-			wrap.classList.remove("dark")
-			wrap.classList.add("light")
-			document.body.style.backgroundColor = 'white'
-
-			svgColor.forEach((el) => {
-				el.classList.remove("dark")
-				el.classList.add("light")
-			})
-
-		} else if(wrap.classList.contains("light")){
-			wrap.classList.remove("light")
-			wrap.classList.add("dark")
-			document.body.style.backgroundColor = 'black'
-
-			svgColor.forEach((el) => {
-				el.classList.remove("light")
-				el.classList.add("dark")
-			})
-		}
 	}
 
 	const onLang = (e) => {

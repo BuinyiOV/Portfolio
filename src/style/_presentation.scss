@@ -7,6 +7,20 @@
 	justify-content: center;
 }
 
-.presentation__name {}
+.presentation__name,
+.presentation__position {
+	background-color: inherit;
+	text-align: center;
+	width: 20%;
+	height: $baseMeather * 2;
+}
 
-.presentation__position {}
+.presentation-animation {}
+
+.star {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border-radius: 25px;
+	@include gradient-background;
+}

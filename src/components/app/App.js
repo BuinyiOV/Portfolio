@@ -11,7 +11,6 @@ const App = () => {
 	const [lang, setLang] = useState()
 	const [chapter, setChapter] = useState(null)
 
-
 	useEffect(() => {
 					setLoaded(true)
 		// eslint-disable-next-line
@@ -25,6 +24,32 @@ const App = () => {
 		setChapter(data)
 	}
 
+		const onMode = () => {
+		const wrap = document.querySelector('.wrapper')
+		const svgColor = document.querySelectorAll('.link-container__svg')
+		
+		if(wrap.classList.contains("dark")){
+			wrap.classList.remove("dark")
+			wrap.classList.add("light")
+			document.body.style.backgroundColor = 'white'
+
+			svgColor.forEach((el) => {
+				el.classList.remove("dark")
+				el.classList.add("light")
+			})
+
+		} else if(wrap.classList.contains("light")){
+			wrap.classList.remove("light")
+			wrap.classList.add("dark")
+			document.body.style.backgroundColor = 'black'
+
+			svgColor.forEach((el) => {
+				el.classList.remove("light")
+				el.classList.add("dark")
+			})
+		}
+	}
+
 	return (
 	<div className="wrapper dark">
 		{loaded? <ContentForming
@@ -35,7 +60,8 @@ const App = () => {
 		{/* <Presentation/> */}
 		<Menu onSetLang={onSetLang}
 				chapter={chapter}
-				onSetChapter={onSetChapter}/>
+				onSetChapter={onSetChapter}
+				onMode={onMode}/>
 	</div>
 	)
 }
