@@ -1,0 +1,54 @@
+.contact {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.contact__item,
+.contact__item a {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	white-space: nowrap;
+	justify-content: center;
+	text-decoration: none;
+	color: inherit;
+	height: $baseMeather
+}
+
+.contact__item a {
+	&:hover {
+		animation: link 1s ease infinite normal running 0s forwards;
+	}
+}
+
+.contact__item svg {
+	margin-left: 0.5rem;
+	fill: inherit;
+	background: inherit;
+}
+
+.contact__item svg:last-child {
+	margin-right: 0.5rem;
+}
+
+.contact__item a svg:first-child {
+	margin-right: 0.5rem;
+}
+
+.contact__item:nth-child(2) {
+	transform: translateY(100vh);
+	animation: sectionShow 0.6s ease 1 normal running 0.5s forwards;
+}
+
+.contact__item:nth-child(3) {
+	transform: translateY(100vh);
+	animation: sectionShow 0.6s ease 1 normal running 1s forwards;
+}
+
+.contact__item:nth-child(4) {
+	transform: translateY(100vh);
+	animation: sectionShow 0.6s ease 1 normal running 1.5s forwards;
+}

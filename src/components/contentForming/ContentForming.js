@@ -22,7 +22,7 @@ const ContentForming = ({loaded, chapter, lang}) => {
 					setComponent(<Works lang={lang}/>);
 					break;
 				case 'contact':
-					setComponent(<Contact lang={lang}/>);
+					setComponent(<Contact/>);
 					break;
 				default:
 					setComponent(<Presentation lang={lang}/>);

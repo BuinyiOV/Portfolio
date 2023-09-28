@@ -26,7 +26,7 @@ const App = () => {
 
 		const onMode = () => {
 		const wrap = document.querySelector('.wrapper')
-		const svgColor = document.querySelectorAll('.link-container__svg')
+		const svgColor = document.querySelectorAll('svg')
 		
 		if(wrap.classList.contains("dark")){
 			wrap.classList.remove("dark")

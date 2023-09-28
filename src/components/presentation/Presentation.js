@@ -1,10 +1,31 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
 import Animation from '../animation/Animation';
 
-const Presentation = () => {
+const Presentation = ({lang}) => {
 
 	const [speed, setSpeed] = useState(5000)
+	const [text, setText] = useState('Oleksii Buinyi')
+
+
+	useEffect(() => {
+
+		switch (lang){
+				case 'en':
+					setText('Oleksii Buinyi');
+					break;
+				case 'pl':
+					setText('Oleksii Buinyi');
+					break;
+				case 'ua':
+					setText('Олексій Буйний');
+					break;
+				default:
+					setText('Oleksii Buinyi');
+			}
+		
+			// eslint-disable-next-line
+	}, [lang])
 
 	const onOverNameOrPos = () => {
 		setSpeed(800)
@@ -20,7 +41,7 @@ const Presentation = () => {
 			<article className="presentation__name"
 				onMouseOver={onOverNameOrPos}
 				onMouseLeave={onOverWrap}>
-					Oleksii Buinyi</article>
+					{text}</article>
 			<article className="presentation__position"
 				onMouseOver={onOverNameOrPos}
 				onMouseLeave={onOverWrap}>

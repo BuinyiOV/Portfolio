@@ -5,6 +5,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	text-transform: capitalize;
 }
 
 .presentation__name,
@@ -14,8 +15,6 @@
 	width: 20%;
 	height: $baseMeather * 2;
 }
-
-.presentation-animation {}
 
 .star {
 	position: absolute;
