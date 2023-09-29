@@ -56,8 +56,6 @@ const App = () => {
 					loaded={loaded}
 					chapter={chapter}
 					lang={lang}/> : <Preloader/>}
-		{/* <Works lang={lang}/> */}
-		{/* <Presentation/> */}
 		<Menu onSetLang={onSetLang}
 				chapter={chapter}
 				onSetChapter={onSetChapter}

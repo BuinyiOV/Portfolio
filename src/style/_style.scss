@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+
 @import "_nullstyle";
 @import "_globals";
 @import "_colors";
@@ -12,6 +14,8 @@
 body {
 
 	background-color: black;
+	font-family: sans-serif;
+
 
 	&::-webkit-scrollbar {
 		width: 0.9vw;
@@ -34,7 +38,7 @@ body {
 
 	&::before {
 		content: '';
-		height: $baseMeather * 2;
+		height: $baseMeather * 4;
 		width: 100%;
 		position: fixed;
 		top: 0;
@@ -47,7 +51,7 @@ body {
 
 	&::after {
 		content: '';
-		height: $baseMeather * 2;
+		height: $baseMeather * 4;
 		width: 100%;
 		position: fixed;
 		top: 0;
@@ -56,6 +60,21 @@ body {
 
 		background-image: linear-gradient(180deg, black 35%, rgba(255, 0, 128, 0) 100%);
 		transition: all 2s ease 0s;
+	}
+}
+
+@media(min-width:920px) {
+	.wrapper {
+
+		&::before {
+			content: '';
+			height: $baseMeather * 2;
+		}
+
+		&::after {
+			content: '';
+			height: $baseMeather * 2;
+		}
 	}
 }
 

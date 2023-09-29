@@ -24,12 +24,13 @@
 
 .carousel-inner {
 	border-width: 2px;
-	border-style: solid none solid solid;
+	border-style: solid solid none solid;
 	border-radius: 3px 3px 0 0;
 }
 
 @media (min-width: 768px) {
 	.carousel-inner {
+		border-style: solid none solid solid;
 		border-radius: 3px 0 0 3px;
 	}
 }

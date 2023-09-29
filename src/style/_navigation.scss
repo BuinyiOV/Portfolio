@@ -93,14 +93,27 @@
 	justify-content: space-evenly;
 	padding: 2px $baseMeather;
 	height: $baseMeather;
-	font-size: $baseMeather;
+	font-size: $baseMeather * 0.7;
 
 	position: fixed;
 	top: 0;
 	left: 0;
+	right: 0;
 	z-index: 5;
 
 	animation: menuTopStart 0.5s ease 1 normal running 0s forwards;
+}
+
+@media (min-width:600px) {
+	.menu-top {
+		font-size: $baseMeather;
+	}
+}
+
+@media (min-width:920px) {
+	.menu-top {
+		right: auto;
+	}
 }
 
 .menu-top__item {
@@ -333,7 +346,7 @@
 	justify-content: space-evenly;
 	padding: 2px $baseMeather;
 	height: $baseMeather;
-	font-size: $baseMeather;
+	font-size: $baseMeather * 0.7;
 
 	position: fixed;
 	top: 0;
@@ -343,13 +356,25 @@
 	animation: menuTopStart 0.5s ease 1 normal running 0s forwards;
 }
 
+@media (min-width:600px) {
+	.personalization-top {
+		font-size: $baseMeather;
+	}
+}
+
 .mode-item-top {
 	text-align: center;
 	text-transform: uppercase;
 	padding: 0 $baseMeather;
-	width: 100%;
 	height: $baseMeather;
 	transition: color 0.15s ease-in 0s;
+
+	position: fixed;
+	top: $baseMeather;
+	left: 0;
+	width: 45%;
+	margin-top: 0.5rem;
+
 
 	&:hover {
 		@include gradient-background;
@@ -357,22 +382,31 @@
 		-webkit-background-clip: text;
 		color: rgba(255, 0, 0, 0);
 	}
+}
 
-	&::after {
-		content: "";
-		display: block;
+@media (min-width:920px) {
+	.mode-item-top {
+		position: static;
 		width: 100%;
-		height: 100%;
-		position: relative;
-		bottom: 200%;
-		left: 0;
-		@include gradient-background;
-		transition: bottom 0.3s ease 0s, height 0.25s ease 0s;
-	}
+		margin-top: 0;
 
-	&:hover::after {
-		height: 2px;
-		bottom: 0;
+
+		&::after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: relative;
+			bottom: 200%;
+			left: 0;
+			@include gradient-background;
+			transition: bottom 0.3s ease 0s, height 0.25s ease 0s;
+		}
+
+		&:hover::after {
+			height: 2px;
+			bottom: 0;
+		}
 	}
 }
 
@@ -389,7 +423,13 @@
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: space-evenly;
-	position: relative;
+
+
+	position: fixed;
+	top: $baseMeather;
+	width: 45%;
+	right: 0;
+	margin-top: 0.5rem;
 
 	&:hover {
 		@include gradient-background;
@@ -408,24 +448,34 @@
 		z-index: -1;
 		left: 0;
 	}
+}
 
-	&::after {
-		content: "";
-		display: block;
-		width: 100%;
-		height: $baseMeather;
-		position: absolute;
-		bottom: 100%;
-		left: 0;
-		@include gradient-background;
-		transition: bottom 0.3s ease 0s, height 0.25s ease 0s;
-	}
-
-	&:hover::after {
-		height: 2px;
-		bottom: -2px;
+@media (min-width:920px) {
+	.language-top {
+		position: relative;
+		width: auto;
+		top: auto;
+		right: auto;
+		margin-top: 0;
 
 
+
+		&::after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: $baseMeather;
+			position: absolute;
+			bottom: 100%;
+			left: 0;
+			@include gradient-background;
+			transition: bottom 0.3s ease 0s, height 0.25s ease 0s;
+		}
+
+		&:hover::after {
+			height: 2px;
+			bottom: -2px;
+		}
 	}
 }
 

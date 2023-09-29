@@ -641,13 +641,85 @@ const DataBase = () => {
 	},
 	]
 
-	const aboutEN = ['Працюю з React та чистим JavaScript.', 'Досвід роботи в багатомовному колективі.', 'Швидко та ефективно навчаюсь, а також добре організовую власний час.', 'Веду ділову переписку та опрацювання документації англійською мовою.', 'Висока культура особиста.'];
+	const aboutEN = {
+		text: [
+			'I work with React and pure JavaScript.',
+			'Experience working in a multilingual team.',
+			'I conduct business correspondence and process documentation in English.',
+			'I learn quickly and efficiently, and I organize my own time well.',
+			'High personal culture.'
+			],
+		download:[
+			{
+				title: 'Download CV EN',
+				path: 'CV.pdf'
+			},
+			{
+				title: 'Download CV PL',
+				path: 'CV.pdf'
+			},
+			{
+				title: 'Download CV UA',
+				path: 'CV.pdf'
+			},
+		],
+	}
 	
-	const aboutPL = ['Працюю з React та чистим JavaScript.', 'Досвід роботи в багатомовному колективі.', 'Швидко та ефективно навчаюсь, а також добре організовую власний час.', 'Веду ділову переписку та опрацювання документації англійською мовою.', 'Висока культура особиста.'];
+	const aboutPL = {
+		text: [
+			'Pracuję z Reactem i czystym JavaScriptem.',
+			'Mam doświadczenie w pracy w wielojęzycznym zespole.',
+			'Prowadzę korespondencję biznesową i procesuję dokumentację w języku angielskim.',
+			'Szybko i sprawnie się uczę, dobrze organizuję swój czas.',
+			'Wysoka kultura osobista.'
+		],
+		download:[
+			{
+				title: 'Pobierz plik CV EN',
+				path: 'CV.pdf'
+			},
+			{
+				title: 'Pobierz plik CV PL',
+				path: 'CV.pdf'
+			},
+			{
+				title: 'Pobierz plik CV UA',
+				path: 'CV.pdf'
+			},
+		],
+	}
 	
-	const aboutUA = ['Працюю з React та чистим JavaScript.', 'Досвід роботи в багатомовному колективі.', 'Швидко та ефективно навчаюсь, а також добре організовую власний час.', 'Веду ділову переписку та опрацювання документації англійською мовою.', 'Висока культура особиста.'];
+	const aboutUA = {
+		text: [
+			'Працюю з React та чистим JavaScript.',
+			'Досвід роботи в багатомовному колективі.',
+			'Веду ділову переписку та опрацювання документації англійською мовою.',
+			'Швидко та ефективно навчаюсь, а також добре організовую власний час.',
+			'Висока культура особиста.'
+		],
+		download:[
+			{
+				title: 'Завантажити CV EN',
+				path: 'CV.pdf'
+			},
+			{
+				title: 'Завантажити CV PL',
+				path: 'CV.pdf'
+			},
+			{
+				title: 'Завантажити CV UA',
+				path: 'CV.pdf'
+			},
+		],
+	}
 
-return { ua, en, pl, aboutEN, aboutPL, aboutUA }
+return { ua,
+			en,
+			pl,
+			aboutEN,
+			aboutPL,
+			aboutUA,
+		}
 
 }
 

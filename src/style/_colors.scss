@@ -1,24 +1,33 @@
 .light {
 	background-color: rgb(255, 255, 255);
 	color: black;
+	font-weight: 600;
 	fill: black;
 	border-color: black;
 	transition: all 1s ease 0s;
 
 	&::after {
-		transform: translate(0, $baseMeather * -2);
+		transform: translate(0, $baseMeather * -4);
 		transition: all 1s ease 0s;
 	}
 
 	&::before {
 		transform: translate(0, 0);
 	}
+}
 
+@media(min-width:700px) {
+	.light {
+		&::after {
+			transform: translate(0, $baseMeather * -2);
+		}
+	}
 }
 
 .dark {
 	background-color: rgb(0, 0, 0);
 	color: white;
+	font-weight: 400;
 	fill: white;
 	border-color: white;
 	transition: all 1s ease 0s;
@@ -29,6 +38,15 @@
 	}
 
 	&::before {
-		transform: translate(0, $baseMeather * -2);
+		transform: translate(0, $baseMeather * -4);
+	}
+}
+
+@media(min-width:700px) {
+
+	.dark {
+		&::before {
+			transform: translate(0, $baseMeather * -2);
+		}
 	}
 }

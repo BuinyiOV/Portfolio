@@ -44,7 +44,7 @@ const oneArticle = (content) => {
 	if(content){
 
 		let imgArr = []
-		
+
 		const onSetImg = (data) => {
 
 			data.images.forEach((img,i) => {
@@ -67,7 +67,6 @@ const oneArticle = (content) => {
 				}
 			})
 		}
-
 		onSetImg(content)
 
 		let techArr = []
