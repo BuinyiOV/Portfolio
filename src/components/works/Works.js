@@ -51,7 +51,7 @@ const oneArticle = (content) => {
 				if( i === 0 ){
 					let oneImg = [
 						<div className="carousel-item active" key={uuidv4 + i}>
-							<img src={img} className="d-block w-100" alt="..."/>
+							<img src={img} className="d-block w-100" alt={img}/>
 						</div>
 					]
 
@@ -59,7 +59,7 @@ const oneArticle = (content) => {
 				} else {
 					let oneImg = [
 						<div className="carousel-item" key={uuidv4 + i}>
-							<img src={img} className="d-block w-100" alt="..."/>
+							<img src={img} className="d-block w-100" alt={img}/>
 						</div>
 					]
 
