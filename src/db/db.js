@@ -646,7 +646,6 @@ const DataBase = () => {
 			'I work with React and pure JavaScript.',
 			'Experience working in a multilingual team.',
 			'I conduct business correspondence and process documentation in English.',
-			'I learn quickly and efficiently, and I organize my own time well.',
 			'High personal culture.'
 			],
 		download:[
@@ -670,7 +669,6 @@ const DataBase = () => {
 			'Pracuję z Reactem i czystym JavaScriptem.',
 			'Mam doświadczenie w pracy w wielojęzycznym zespole.',
 			'Prowadzę korespondencję biznesową i procesuję dokumentację w języku angielskim.',
-			'Szybko i sprawnie się uczę, dobrze organizuję swój czas.',
 			'Wysoka kultura osobista.'
 		],
 		download:[
@@ -694,7 +692,6 @@ const DataBase = () => {
 			'Працюю з React та чистим JavaScript.',
 			'Досвід роботи в багатомовному колективі.',
 			'Веду ділову переписку та опрацювання документації англійською мовою.',
-			'Швидко та ефективно навчаюсь, а також добре організовую власний час.',
 			'Висока культура особиста.'
 		],
 		download:[
